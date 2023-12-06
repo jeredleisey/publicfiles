@@ -82,8 +82,21 @@
       }
     }
   },
-  "securityDefinitions": {},
-  "security": [],
+  "securityDefinitions": {
+    "NintexOauth2": {
+      "type": "oauth2",
+      "flow": "application",
+      "scopes": {
+        "user": "user allowed to update setting"
+      },
+      "tokenUrl": "https://nintex7-dev-ed.my.salesforce.com/services/oauth2/token"
+    }
+  },
+  "security": [
+    {
+      "NintexOauth2": []
+    }
+  ],
   "tags": [
     {
       "name": "Services",
